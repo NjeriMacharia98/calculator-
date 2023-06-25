@@ -90,3 +90,22 @@ def get_operator
       return
     end
   end
+  # getting results
+  def display_result(num1, operator, num2, result)
+    puts "Result: #{num1} #{operator_symbol(operator)} #{num2} = #{result}"
+  end
+  def operator_symbol(operator)
+    case operator
+    when 1
+      "+"
+    when 2
+      "-"
+    when 3
+      "*"
+    when 4
+      "/"
+    end
+  end
+  
+  # Calling the calculator method to run the app
+  calculator
