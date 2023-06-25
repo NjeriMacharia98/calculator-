@@ -45,7 +45,7 @@
 # frozen_string_literal: true
 
 def calculator
-  puts "Welcome to the Calculator App!"
+  puts "Welcome to my Calculator "
   num1 = get_number("Please enter the first number:")
   num2 = get_number("Please enter the second number:")
   operator = get_operator
@@ -59,7 +59,7 @@ def get_number(prompt)
     puts prompt
     gets.chomp.to_f
 end
-# getthing operator
+# getting operator
 def get_operator
     puts "Please select an operation:"
     puts "1. Addition (+)"
@@ -67,4 +67,26 @@ def get_operator
     puts "3. Multiplication (*)"
     puts "4. Division (/)"
     gets.chomp.to_i
+  end
+
+  # calculating result based on operator
+  def calculate_result(num1, num2, operator)
+    case operator
+    when 1
+      num1 + num2
+    when 2
+      num1 - num2
+    when 3
+      num1 * num2
+    when 4
+      if num2 != 0
+        num1 / num2
+      else
+        puts "Error: Division by zero is not allowed!"
+        return
+      end
+    else
+      puts "Error: Invalid operation!"
+      return
+    end
   end
