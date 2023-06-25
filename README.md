@@ -1,4 +1,4 @@
-# calculator-
+# mycalculator-
 #deliverables 
 Build a calculator app using Ruby with the following requirements
 Requirements:
